@@ -40,5 +40,5 @@ Do we really need to do this? I think generally in longer research projects conf
 
 ## Acknowledgements
 
-I used ChatGPT while creating this tool. It was helpful in many ways, especially with boiler-plate code and documentation. But it was misleading at times as well. Overall, it is helpful (don't know if its 10x though)!
+I used ChatGPT while creating this tool. It was helpful in many ways, especially with boiler-plate code and documentation. But it was misleading at times as well. Overall, it is helpful!
 
