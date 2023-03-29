@@ -1,6 +1,6 @@
 # WACKY: Why Another Ckonfig sYstem
 
-A small extension of YACS with the following extensions:
+A small extension of YACS with the following features:
 
 ### Procedural Configuration
 
@@ -13,7 +13,7 @@ Avoid writing argparser for your configuration. An argparser for `CfgNodeFactory
 
 ### Visualization
 
-Visualize your configuration with [procXD](https://github.com/BardOfCodes/procXD).
+Visualize your configuration with [procXD](https://github.com/BardOfCodes/procXD). Use `config.to_graph()` to convert the configuration to networkx graphs, and use `procXD`'s `render_stack_sketch` to create an excalidraw file with the configuration as shown below. Visualize excalidraw files either from web (just load the file at [excalidraw.com](https://excalidraw.com/)) or with a vs-code [plugin](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor) (simply open a `.excalidraw` file in vscode - example fines in `example/xd_figures`.
 
 ![configuration visualization](assets/configuration.png)
 
@@ -37,4 +37,8 @@ Do we really need to do this? I think generally in longer research projects conf
 1) [YACS](https://github.com/rbgirshick/yacs): Generally Yacs is great and I have used it in all my previous projects. Howver, its hard to configure ablations procedurally, or have quick command line changes on to config directly with yacs.
 
 2) [Hydra](https://github.com/facebookresearch/hydra): Pretty awesome, espcially since I am stealing the arbitrary config command-line support idea from hydra. Main drawback is that only works with yaml files, which prohibits programmatic configurations.
+
+## Acknowledgements
+
+I used ChatGPT while creating this tool. It was helpful in many ways, especially with boiler-plate code and documentation. But it was misleading at times as well. Overall, it is helpful (don't know if its 10x though)!
 
