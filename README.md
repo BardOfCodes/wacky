@@ -4,10 +4,9 @@ A small extension of YACS with the following features:
 
 ### Procedural Configuration
 
-Configure your ablations via `CfgNodeFactory`. `CfgNodeFactory` provides a procedural way to change configuration. Essentially, create a class for the set of configuration variations, and select different versions using `__init__` named parameters. Example given in `configs/ablations/*`. 
+Configure your ablations via `CfgNodeFactory`. `CfgNodeFactory` provides a procedural way to change configuration. Essentially, create a class for the set of configuration variations, and select different versions using `__init__` named parameters. Example given in `configs/ablations/*`.
 
-
-### Automatic Command-line support:
+### Automatic Command-line support
 
 Avoid writing argparser for your configuration. An argparser for `CfgNodeFactory` instantiation parameters is directly created using a class method: `CfgNodeFactory.get_argparser()`. Further, if you want to specifically modify a certain configuration via command-line, simply add them with `--cfg.` prefix. Example shown in `examples/demo.py`.
 
@@ -30,7 +29,7 @@ Simpy run `python setup.py install` to install wacky as a package in your python
 
 ## Why?
 
-Do we really need to do this? I think generally in longer research projects configurations eventually do get large and unwieldy. At that point, it helps to do changes programmatically. This fits my usecase, may not be right for all situations!
+Do we really need to do this? I think generally in longer research projects configurations eventually do get large and unwieldy. At that point, it helps to do changes programmatically. This fits my usecase, but it may not be right for your usecase!
 
 ### Drawbacks with Alternatives
 
@@ -41,4 +40,3 @@ Do we really need to do this? I think generally in longer research projects conf
 ## Acknowledgements
 
 I used ChatGPT while creating this tool. It was helpful in many ways, especially with boiler-plate code and documentation. But it was misleading at times as well. Overall, it is helpful!
-
