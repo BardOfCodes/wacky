@@ -106,8 +106,12 @@ class CfgNodeFactory:
             if name == "self":
                 continue
             if param.default is not inspect.Parameter.empty:
-                parser.add_argument(
-                    f"--{name}", type=type(param.default), default=param.default)
+                if isinstance(param.default, bool):
+                    parser.add_argument(
+                        f"--{name}", action="store_true", default=param.default)
+                else:
+                    parser.add_argument(
+                        f"--{name}", type=type(param.default), default=param.default)
             else:
                 parser.add_argument(name, type=type(param.default))
         return parser
